@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Data Scientist at Metis and Freelance Question-Asker
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I'm a student at the Metis Data Science Bootcamp, a 12 week intensive course in NYC that focuses on enhancing skills used in the data science industry.
+
+Read more about me at my [LinkedIn][https://www.linkedin.com/in/daniel-yawitz-5b6a8a37]
+
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[daniel.yawitz@gmail.com](mailto:daniel.yawitz@gmail.com)
