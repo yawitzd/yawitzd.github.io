@@ -1,3 +1,9 @@
+
+---
+layout: post
+title: Know Your Data
+---
+
 In a quick first pass at a dataset, it's frustratingly easy to come to the wrong conclusion by not knowing what real-world-variables your data represents.
 
 For example, I took a look at the [MTA's Turnstile Dataset](http://web.mta.info/developers/turnstile.html) to see how quickly I could find the busiest subway station in NYC. And after doing a quick sum over a variable and a time period, my answer was...
