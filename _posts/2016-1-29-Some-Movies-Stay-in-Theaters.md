@@ -15,11 +15,11 @@ I ran a quick logistic regression on a subset of that data to see if I could pre
 
 Here's the data I was left with:
 
-![Scatter matrices get me pumped](images/posts/02_movies_matrix.png =250x)
+![Scatter matrices get me pumped](images/posts/02_movies_matrix.png)
 
 The most linear relationships I found between these points and time spent in theaters ('days') were from opening weekend gross and Metacritic score (pulled in from [OMDB](http://www.omdbapi.com/)). I took the log of the first two features (to distribute them a bit more normally). A regression run on each of those features looked like this:
 
-![Lots of numbers look impressive](02_weekend_gross_and_metacritic.png =250x)
+![Lots of numbers look impressive](02_weekend_gross_and_metacritic.png)
 
 A multi linear model on those two variables spat out an R-squared value of 0.465. That's not much to bet on, but it's not bad for two features. If a big movie tanks on opening weekend and has lousy reviews, don't expect it to stay in theaters very long.
 
