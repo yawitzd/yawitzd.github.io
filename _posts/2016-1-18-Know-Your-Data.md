@@ -11,8 +11,8 @@ For example, I took a look at the [MTA's Turnstile Dataset](http://web.mta.info/
 
 And even though that seemed counterintuitive, I started to justify how that might make sense. Times Square and Grand Central are clearly commuter hubs, but Union Square is always busy, even on nights and weekends. Maybe that weekend traffic gave Union Square a boost.
 
-![Union Square Ridership, April 2015](/images/unionsq_ridership_201504.png "Union Square Ridership, April 2015")
-![Herald Square Ridership, April 2015](/images/heraldsq_ridership_201504.png "Union Square Ridership, April 2015")
+![Union Square Ridership, April 2015](/images/posts/01_unionsq_ridership_201504.png "Union Square Ridership, April 2015")
+![Herald Square Ridership, April 2015](/images/posts/01_heraldsq_ridership_201504.png "Union Square Ridership, April 2015")
 
 But, a plot of Union Square shows no big boost in weekend traffic compared to Herald Square. So I took another look at the data I was using.
 
@@ -20,4 +20,4 @@ It turned out the variable I was using for station (MTA's '['remote unit'](http:
 
 So, two pitfalls to avoid in early analysis. First, investigate your variables! That might involve more work than just reading the README. Like talking to someone who knows the dataset, or doing some early data sweeping to check for extreme values and double counting.
 
-Second, double check any findings that are counterintuitive. They might just be a misreading of your analysis. And if you did come across something interesting, you should want to find more proof for it anyway. 
+Second, double check any findings that are counterintuitive. They might be a misreading of your analysis. And if you did come across something interesting, you should want to find more proof for it anyway.
