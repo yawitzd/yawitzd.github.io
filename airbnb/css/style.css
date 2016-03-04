@@ -1,0 +1,156 @@
+
+body {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #565a5c;
+}
+
+h1{
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #565a5c;
+}
+
+h2{
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #565a5c;
+}
+
+
+a, a:visited {
+  color:#333;
+}
+
+#neighborhoods{
+  stroke: grey;
+  stroke-width: 1px;
+  fill: #62CCFF;
+  fill-opacity: 1
+}
+
+.hidden {
+  display: none;
+}
+
+div.tooltip {
+  color: #222;
+  /*background-color: #fff;*/
+  padding: .5em;
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px;
+  opacity: 0.9;
+  position: absolute;;
+  font-size: 18px;
+}
+
+#bubble_container {
+  float:left;
+  /*margin-right: 500;*/
+  padding-top:20px;
+  width: 70%;
+  margin-left:30px;
+  /*width: 980px;*/
+  /*border-left: 2px #ddd solid;
+  border-right: 2px #ddd solid;*/
+}
+
+#map_container {
+  float: left;
+  padding-top:20px;
+  width: 25%;
+  margin-right: 20px;
+  /*width: 500px;*/
+  /*border-left: 2px #ddd solid;
+  border-right: 2px #ddd solid;*/
+}
+
+
+
+header {
+  padding: 10px;
+}
+
+#book-title {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #555;
+  font-size: 2.3em;
+  text-align: center;
+}
+
+#num-reviews, #pos, #subj, #stars  {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #555;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#text-select {
+  float:right;
+  margin-right: 10px;
+}
+
+#vis {
+  overflow: hidden;
+  position: relative;
+}
+
+#status {
+  padding:0 0 20px 20px;
+}
+
+#controls {
+  padding: 20px;
+  background-color: #eee;
+  margin: 10px;
+  width: 350px;
+}
+
+#bubble-background {
+  fill: none;
+  pointer-events: all;
+}
+
+.bubble-node {
+  /* fill: #d1e0f3; */
+  fill: #FF7478;
+}
+
+.bubble-hover {
+  /* fill: #b8c7d9; */
+  fill: #FFA6A8;
+}
+
+.bubble-selected {
+  /* fill: #a8c8ee;  */
+  fill: #FF5A5E;
+  /* stroke: #6081a3; */
+  /*stroke: #A6BA92;
+  stroke-width: 1.5px;*/
+}
+
+.active {
+  color: #FF5A5E
+}
+
+a.bubble-label {
+  font-family: georgia, "times new roman", times, serif;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1em;
+  position: absolute;
+}
+
+
+.bubble-label .bubble-label-value {
+  font: 11px sans-serif;
+  white-space: nowrap;
+}
+
+footer p {
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:20px;
+  font: 13px sans-serif;
+  /*bottom: 20px*/
+}

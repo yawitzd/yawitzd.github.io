@@ -1,0 +1,364 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Airbnb Reviews Viz</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- end CSS-->
+
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="bubble_container" class="bubble_container">
+    <select id="text-select">
+      <option value="allerton">Allerton</option>
+      <option value="ardenheights">Arden Heights</option>
+      <option value="arrochar">Arrochar</option>
+      <option value="arverne">Arverne</option>
+      <option value="astoria">Astoria</option>
+      <option value="bathbeach">Bath Beach</option>
+      <option value="batteryparkcity">Battery Park City</option>
+      <option value="bayridge">Bay Ridge</option>
+      <option value="bayterrace">Bay Terrace</option>
+      <option value="bayterrace,statenisland">Bay Terrace, Staten Island</option>
+      <option value="baychester">Baychester</option>
+      <option value="bayside">Bayside</option>
+      <option value="bayswater">Bayswater</option>
+      <option value="bedford-stuyvesant">Bedford-Stuyvesant</option>
+      <option value="belleharbor">Belle Harbor</option>
+      <option value="bellerose">Bellerose</option>
+      <option value="belmont">Belmont</option>
+      <option value="bensonhurst">Bensonhurst</option>
+      <option value="bergenbeach">Bergen Beach</option>
+      <option value="boerumhill">Boerum Hill</option>
+      <option value="boroughpark">Borough Park</option>
+      <option value="briarwood">Briarwood</option>
+      <option value="brightonbeach">Brighton Beach</option>
+      <option value="bronxdale">Bronxdale</option>
+      <option value="brooklynheights">Brooklyn Heights</option>
+      <option value="brownsville">Brownsville</option>
+      <option value="bushwick">Bushwick</option>
+      <option value="cambriaheights">Cambria Heights</option>
+      <option value="canarsie">Canarsie</option>
+      <option value="carrollgardens">Carroll Gardens</option>
+      <option value="castletoncorners">Castleton Corners</option>
+      <option value="chelsea">Chelsea</option>
+      <option value="chinatown">Chinatown</option>
+      <option value="cityisland">City Island</option>
+      <option value="civiccenter">Civic Center</option>
+      <option value="claremontvillage">Claremont Village</option>
+      <option value="clasonpoint">Clason Point</option>
+      <option value="clifton">Clifton</option>
+      <option value="clintonhill">Clinton Hill</option>
+      <option value="co-opcity">Co-op City</option>
+      <option value="cobblehill">Cobble Hill</option>
+      <option value="collegepoint">College Point</option>
+      <option value="columbiast">Columbia St</option>
+      <option value="concord">Concord</option>
+      <option value="concourse">Concourse</option>
+      <option value="concoursevillage">Concourse Village</option>
+      <option value="coneyisland">Coney Island</option>
+      <option value="corona">Corona</option>
+      <option value="countryclub">Country Club</option>
+      <option value="crownheights">Crown Heights</option>
+      <option value="cypresshills">Cypress Hills</option>
+      <option value="dumbo">DUMBO</option>
+      <option value="ditmarssteinway">Ditmars Steinway</option>
+      <option value="donganhills">Dongan Hills</option>
+      <option value="downtownbrooklyn">Downtown Brooklyn</option>
+      <option value="dykerheights">Dyker Heights</option>
+      <option value="eastelmhurst">East Elmhurst</option>
+      <option value="eastflatbush">East Flatbush</option>
+      <option value="eastharlem">East Harlem</option>
+      <option value="eastmorrisania">East Morrisania</option>
+      <option value="eastnewyork">East New York</option>
+      <option value="eastvillage">East Village</option>
+      <option value="eastchester">Eastchester</option>
+      <option value="elmhurst">Elmhurst</option>
+      <option value="eltingville">Eltingville</option>
+      <option value="emersonhill">Emerson Hill</option>
+      <option value="farrockaway">Far Rockaway</option>
+      <option value="fieldston">Fieldston</option>
+      <option value="financialdistrict">Financial District</option>
+      <option value="flatbush">Flatbush</option>
+      <option value="flatirondistrict">Flatiron District</option>
+      <option value="flatlands">Flatlands</option>
+      <option value="flushing">Flushing</option>
+      <option value="fordham">Fordham</option>
+      <option value="foresthills">Forest Hills</option>
+      <option value="fortgreene">Fort Greene</option>
+      <option value="forthamilton">Fort Hamilton</option>
+      <option value="freshmeadows">Fresh Meadows</option>
+      <option value="gerritsenbeach">Gerritsen Beach</option>
+      <option value="glendale">Glendale</option>
+      <option value="gowanus">Gowanus</option>
+      <option value="gramercy">Gramercy</option>
+      <option value="graniteville">Graniteville</option>
+      <option value="gravesend">Gravesend</option>
+      <option value="greatkills">Great Kills</option>
+      <option value="greenpoint">Greenpoint</option>
+      <option value="greenwichvillage">Greenwich Village</option>
+      <option value="grymeshill">Grymes Hill</option>
+      <option value="harlem">Harlem</option>
+      <option value="hell'skitchen">Hell's Kitchen</option>
+      <option value="highbridge">Highbridge</option>
+      <option value="hollis">Hollis</option>
+      <option value="hollishills">Hollis Hills</option>
+      <option value="holliswood">Holliswood</option>
+      <option value="howardbeach">Howard Beach</option>
+      <option value="huntspoint">Hunts Point</option>
+      <option value="inwood">Inwood</option>
+      <option value="jacksonheights">Jackson Heights</option>
+      <option value="jamaica">Jamaica</option>
+      <option value="jamaicaestates">Jamaica Estates</option>
+      <option value="jamaicahills">Jamaica Hills</option>
+      <option value="kensington">Kensington</option>
+      <option value="kewgardens">Kew Gardens</option>
+      <option value="kewgardenshills">Kew Gardens Hills</option>
+      <option value="kingsbridge">Kingsbridge</option>
+      <option value="kipsbay">Kips Bay</option>
+      <option value="laurelton">Laurelton</option>
+      <option value="lighthousehill">Lighthouse Hill</option>
+      <option value="littleitaly">Little Italy</option>
+      <option value="longislandcity">Long Island City</option>
+      <option value="longwood">Longwood</option>
+      <option value="lowereastside">Lower East Side</option>
+      <option value="manhattanbeach">Manhattan Beach</option>
+      <option value="marblehill">Marble Hill</option>
+      <option value="marinersharbor">Mariners Harbor</option>
+      <option value="maspeth">Maspeth</option>
+      <option value="melrose">Melrose</option>
+      <option value="middlevillage">Middle Village</option>
+      <option value="midlandbeach">Midland Beach</option>
+      <option value="midtown">Midtown</option>
+      <option value="midwood">Midwood</option>
+      <option value="millbasin">Mill Basin</option>
+      <option value="morningsideheights">Morningside Heights</option>
+      <option value="morrisheights">Morris Heights</option>
+      <option value="morrispark">Morris Park</option>
+      <option value="morrisania">Morrisania</option>
+      <option value="motthaven">Mott Haven</option>
+      <option value="mounthope">Mount Hope</option>
+      <option value="murrayhill">Murray Hill</option>
+      <option value="navyyard">Navy Yard</option>
+      <option value="neponsit">Neponsit</option>
+      <option value="newbrighton">New Brighton</option>
+      <option value="newdorpbeach">New Dorp Beach</option>
+      <option value="newspringville">New Springville</option>
+      <option value="noho">NoHo</option>
+      <option value="nolita">Nolita</option>
+      <option value="northriverdale">North Riverdale</option>
+      <option value="norwood">Norwood</option>
+      <option value="oakwood">Oakwood</option>
+      <option value="ozonepark">Ozone Park</option>
+      <option value="parkslope">Park Slope</option>
+      <option value="parkchester">Parkchester</option>
+      <option value="pelhambay">Pelham Bay</option>
+      <option value="pelhamgardens">Pelham Gardens</option>
+      <option value="portmorris">Port Morris</option>
+      <option value="portrichmond">Port Richmond</option>
+      <option value="prospectheights">Prospect Heights</option>
+      <option value="prospect-leffertsgardens">Prospect-Lefferts Gardens</option>
+      <option value="queensvillage">Queens Village</option>
+      <option value="randallmanor">Randall Manor</option>
+      <option value="redhook">Red Hook</option>
+      <option value="regopark">Rego Park</option>
+      <option value="richmondhill">Richmond Hill</option>
+      <option value="richmondtown">Richmondtown</option>
+      <option value="ridgewood">Ridgewood</option>
+      <option value="riverdale">Riverdale</option>
+      <option value="rockawaybeach">Rockaway Beach</option>
+      <option value="rooseveltisland">Roosevelt Island</option>
+      <option value="rosebank">Rosebank</option>
+      <option value="rosedale">Rosedale</option>
+      <option value="schuylerville">Schuylerville</option>
+      <option value="sheepsheadbay">Sheepshead Bay</option>
+      <option value="shoreacres">Shore Acres</option>
+      <option value="silverlake">Silver Lake</option>
+      <option value="soho">SoHo</option>
+      <option value="soundview">Soundview</option>
+      <option value="southbeach">South Beach</option>
+      <option value="southozonepark">South Ozone Park</option>
+      <option value="southslope">South Slope</option>
+      <option value="springfieldgardens">Springfield Gardens</option>
+      <option value="spuytenduyvil">Spuyten Duyvil</option>
+      <option value="st.albans">St. Albans</option>
+      <option value="st.george">St. George</option>
+      <option value="stapleton">Stapleton</option>
+      <option value="stuyvesanttown">Stuyvesant Town</option>
+      <option value="sunnyside">Sunnyside</option>
+      <option value="sunsetpark">Sunset Park</option>
+      <option value="theaterdistrict">Theater District</option>
+      <option value="throgsneck">Throgs Neck</option>
+      <option value="todthill">Todt Hill</option>
+      <option value="tompkinsville">Tompkinsville</option>
+      <option value="tottenville">Tottenville</option>
+      <option value="tremont">Tremont</option>
+      <option value="tribeca">Tribeca</option>
+      <option value="twobridges">Two Bridges</option>
+      <option value="unionport">Unionport</option>
+      <option value="universityheights">University Heights</option>
+      <option value="uppereastside">Upper East Side</option>
+      <option value="upperwestside">Upper West Side</option>
+      <option value="vannest">Van Nest</option>
+      <option value="vinegarhill">Vinegar Hill</option>
+      <option value="wakefield">Wakefield</option>
+      <option value="washingtonheights">Washington Heights</option>
+      <option value="westbrighton">West Brighton</option>
+      <option value="westfarms">West Farms</option>
+      <option value="westvillage">West Village</option>
+      <option value="westchestersquare">Westchester Square</option>
+      <option value="whitestone">Whitestone</option>
+      <option value="williamsbridge">Williamsbridge</option>
+      <option value="williamsburg">Williamsburg</option>
+      <option value="windsorterrace">Windsor Terrace</option>
+      <option value="woodhaven">Woodhaven</option>
+      <option value="woodlawn">Woodlawn</option>
+      <option value="woodside">Woodside</option>
+    </select>
+    <header>
+
+      <h1>Airbnb reviews by neighborhood</h1>
+      <h2>The most frequently used words in:</h2>
+      <h2 id="book-title"></h2>
+      <h2 id="num-reviews"></h2>
+      <h2 id="stars"></h2>
+      <h2 id="pos"></h2>
+
+    </header>
+    <div id="main" role="main">
+      <div id="vis"></div>
+      <div id="status"></div>
+      <!-- <div id="controls">
+        <h3>Jitter</h3>
+        <form id="jitter" oninput="output.value = (jitter_input.value / 200).toFixed(3)" >
+          <input id="jitter_input" type="range" min="0" max="400" value="100" style="width:240px;">
+          <output name="output" for="input">0.5</output>
+        </form>
+      </div> -->
+    </div>
+  </div>
+  <!--! end of bubbles #bubble_container -->
+
+  <div id='map_container' class="map_container">
+    <h1>Click on a neighborhood</h1>
+    <script>
+
+      var width = 500,
+        height = 700;
+
+      // Tie an svg to this div
+      var svg = d3.select("#map_container").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      // Create a 'tooltip' to pop up with text when you mouseover an element
+      var tooltip = d3.select('#map_container').append('div')
+        .attr('class', 'hidden tooltip')
+        .style("opacity", 0);
+
+      // Call the geojson that draws the city and each neighborhood
+      d3.json("https://raw.githubusercontent.com/yawitzd/yawitzd.github.io/master/data/nyc/nycgeo.json", function(error, nyb) {
+
+        console.log(nyb)
+
+        // Set the projection and coordinates for the map
+        var projection = d3.geo.mercator()
+          .center([-73.94, 40.70])
+          .scale(45000)
+          .translate([(width) / 2, (height) / 2]);
+
+        // Set the map's geography from the projection
+        var path = d3.geo.path()
+          .projection(projection);
+
+        // Append each neighborhood, 'g', to the svg
+        var g = svg.append("g")
+          .attr("id", "neighborhoods")
+          .selectAll("neighborhoods")
+          .data(nyb.features) //Call in the data
+          .enter().append("path")
+          .attr("class", function(d) {
+            return d.properties.neighborhood; //Name each element
+          })
+          .attr("d", path)
+
+        .on('mouseover', function(d, i) {
+          d3.select(this).style('fill', '#0A95D9'); //Change the color on mouseover
+          tooltip.transition().duration(200); //Make the neightborhood label fade in
+          tooltip.classed('hidden', false)
+            .attr('style', 'top: 100px; right:30px')
+            .html(d.properties.neighborhood);
+        })
+
+        .on('mouseout', function(d, i) {
+            d3.selectAll('path') //Reset the color when the mouse moves
+              .style({
+                'fill': '#62CCFF'
+              });
+            tooltip.transition().duration(200) //Fade the label out on when the mouse leaves
+              .style('opacity', 0)
+          })
+          .on("click", function(d) {
+            // On click, reset the url (and bubbles) to that neighborhood
+            window.open("../airbnb/?" + d.properties.neighborhood.toLowerCase().replace(/ /g, '') + '#', target = "_self");
+          });;
+
+
+        ;
+      });
+    </script>
+    <footer>
+      <p><a href="http://vallandingham.me/building_a_bubble_cloud.html">Blog Post</a> | <a href="https://github.com/vlandham/bubble_cloud">Source Code</a> | <a href="http://www.nytimes.com/interactive/2012/09/04/us/politics/democratic-convention-words.html">Original Inspiration</a></p>
+    </footer>
+  </div>
+  <!--! end of #map_container -->
+
+
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+  <script>
+    window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')
+  </script>
+
+
+  <script defer src="js/plugins.js"></script>
+  <script src="js/libs/coffee-script.js"></script>
+  <script src="js/libs/d3.min.js"></script>
+  <script type="text/coffeescript" src="coffee/vis.coffee"></script>
+  <script type="text/javascript">
+  </script>
+
+
+
+
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+</body>
+
+</html>
