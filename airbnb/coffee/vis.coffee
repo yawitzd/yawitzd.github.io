@@ -408,6 +408,7 @@ root.plotData = (selector, data, plot) ->
     .call(plot)
 
 texts = [
+  {key:"midtown", file:"midtown.csv", name:"Midtown", num:"10485 reviews", pos:"Average 'positive sentiment' per review: 67.85", stars:"Average star rating: 4.59"}
   {key:"allerton", file:"allerton.csv", name:"Allerton", num:"456 reviews", pos:"Average 'positive sentiment' per review: 66.24", stars:"Average star rating: 4.53"}
 {key:"ardenheights", file:"ardenheights.csv", name:"Arden Heights", num:"24 reviews", pos:"Average 'positive sentiment' per review: 71.8", stars:"Average star rating: 4.96"}
 {key:"arrochar", file:"arrochar.csv", name:"Arrochar", num:"12 reviews", pos:"Average 'positive sentiment' per review: 75.68", stars:"Average star rating: 4.92"}
@@ -527,7 +528,7 @@ texts = [
 {key:"melrose", file:"melrose.csv", name:"Melrose", num:"48 reviews", pos:"Average 'positive sentiment' per review: 67.08", stars:"Average star rating: 4.14"}
 {key:"middlevillage", file:"middlevillage.csv", name:"Middle Village", num:"174 reviews", pos:"Average 'positive sentiment' per review: 66.63", stars:"Average star rating: 4.65"}
 {key:"midlandbeach", file:"midlandbeach.csv", name:"Midland Beach", num:"36 reviews", pos:"Average 'positive sentiment' per review: 67.68", stars:"Average star rating: 4.51"}
-{key:"midtown", file:"midtown.csv", name:"Midtown", num:"10485 reviews", pos:"Average 'positive sentiment' per review: 67.85", stars:"Average star rating: 4.59"}
+# {key:"midtown", file:"midtown.csv", name:"Midtown", num:"10485 reviews", pos:"Average 'positive sentiment' per review: 67.85", stars:"Average star rating: 4.59"}
 {key:"midwood", file:"midwood.csv", name:"Midwood", num:"490 reviews", pos:"Average 'positive sentiment' per review: 67.81", stars:"Average star rating: 4.65"}
 {key:"millbasin", file:"millbasin.csv", name:"Mill Basin", num:"2 reviews", pos:"Average 'positive sentiment' per review: 70.23", stars:"Average star rating: 4.0"}
 {key:"morningsideheights", file:"morningsideheights.csv", name:"Morningside Heights", num:"1900 reviews", pos:"Average 'positive sentiment' per review: 68.17", stars:"Average star rating: 4.59"}
