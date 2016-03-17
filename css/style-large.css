@@ -8,7 +8,7 @@
 
 	#header {
 		padding: 6em 3em 3em 3em;
-		width: 30%;
+		width: 27%;
 	}
 
 		#header h1 {
@@ -23,7 +23,7 @@
 
 	#footer {
 		padding: 0 3em 5em 3em;
-		width: 30%;
+		width: 27%;
 	}
 
 		#footer .copyright li {
@@ -37,8 +37,8 @@
 /* Main */
 
 	#main {
-		margin-left: 30%;
+		margin-left: 27%;
 		max-width: none;
 		padding: 6em 3em 3em 3em;
-		width: calc(100% - 30%);
+		width: calc(100% - 27%);
 	}
