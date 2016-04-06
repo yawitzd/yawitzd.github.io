@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Metis Project 2: Predicting Time Spent in Theaters
+title: Some Movies Stay in Theaters a Long Time
 ---
 
 First of all, do you know how easy it is to scrape text from an HTML page? [Selenium](http://www.seleniumhq.org/) and [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) make it almost unfair. It helps when the page is built simply, like Box Office Mojo.
