@@ -25,7 +25,7 @@ In a lot of cases (like Jamaica, above), the word bubbles give you a quick overv
 
 There's still some refining I want to do. For example, I still want to take the neighborhood's name out of each neighborhood's list. ('Soho' drowns almost everything else in Soho, with the exception of 'loft'). I also want to find a way to keep common n-grams from repeating themselves as 1- 2- and 3- grams. The Upper West Side is a good example of that:
 
-![UWS](ihttp://yawitzd.github.io/mages/posts/03-uws.jpg)
+![UWS](http://yawitzd.github.io/images/posts/03-uws.jpg)
 *Central, Park, Central Park, Upper Side, and Side, are all important, you say?*
 
 But this isn't a bad place to start. All this code is on [my github](https://github.com/yawitzd/airbnb_reviews) if you want to look deeper.
