@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Some movies stay in theaters for a long time
+title: Metis Project 2: Predicting Time Spent in Theaters
 ---
 
 First of all, do you know how easy it is to scrape text from an HTML page? [Selenium](http://www.seleniumhq.org/) and [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) make it almost unfair. It helps when the page is built simply, like Box Office Mojo.
 
 ![Here's to you, divs, tables, and simple URLs.](images/posts/02-bom.png)
+*Here's to you, divs, tables, and simple URLs.*
+
 
 With that in mind, I pulled data from all 15,000 movies in the [Box Office Mojo](http://www.boxofficemojo.com/movies/alphabetical.htm?letter=A&p=.htm) database. Almost all movies have numbers on box office performance (clearly), open date, close date, oscar recognition, budget, runtime, cast, crew, and size of release.
 

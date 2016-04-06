@@ -283,7 +283,6 @@
       // Call the geojson that draws the city and each neighborhood
       d3.json("https://raw.githubusercontent.com/yawitzd/yawitzd.github.io/master/data/nyc/nycgeo.json", function(error, nyb) {
 
-        console.log(nyb)
 
         // Set the projection and coordinates for the map
         var projection = d3.geo.mercator()
