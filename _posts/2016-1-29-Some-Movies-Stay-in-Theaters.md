@@ -5,7 +5,7 @@ title: Some Movies Stay in Theaters a Long Time
 
 First of all, do you know how easy it is to scrape text from an HTML page? [Selenium](http://www.seleniumhq.org/) and [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) make it almost unfair. It helps when the page is built simply, like Box Office Mojo.
 
-![Here's to you, divs, tables, and simple URLs.](images/posts/02-bom.png)
+![Here's to you, divs, tables, and simple URLs.](/images/posts/02-bom.png)
 *Here's to you, divs, tables, and simple URLs.*
 
 
@@ -17,11 +17,11 @@ I ran a quick logistic regression on a subset of that data to see if I could pre
 
 Here's the data I was left with:
 
-![Scatter matrices get me pumped](images/posts/02_movies_matrix.png)
+![Scatter matrices get me pumped](/images/posts/02_movies_matrix.png)
 
 The most linear relationships I found between these points and time spent in theaters ('days') were from opening weekend gross and Metacritic score (pulled in from [OMDB](http://www.omdbapi.com/)). I took the log of the first two features (to distribute them a bit more normally). A regression run on each of those features looked like this:
 
-![Lots of numbers look impressive](images/posts/02_weekend_gross_and_metacritic.png)
+![Lots of numbers look impressive](/images/posts/02_weekend_gross_and_metacritic.png)
 
 A multi linear model on those two variables spat out an R-squared value of 0.465. That's not much to bet on, but it's not bad for two features. If a big movie tanks on opening weekend and has lousy reviews, don't expect it to stay in theaters very long.
 
